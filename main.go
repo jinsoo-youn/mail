@@ -3,15 +3,24 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"log"
+	"os"
+	"path/filepath"
 
 	"gopkg.in/gomail.v2"
 	"gopkg.in/yaml.v2"
 )
 
 func main() {
+	dir, err := filepath.Abs(filepath.Dir(os.Args[1]))
+	if err != nil {
+		log.Fatal(err)
+	}
 
-	// content, err := ioutil.ReadFile("C:/Users/jinsoo_youn/go/src/github.com/jinsoo-youn/mail/config.yaml")
-	content, err := ioutil.ReadFile("https://github.com/jinsoo-youn/mail/config.yaml")
+	path := filepath.Join(dir, "config.yaml")
+
+	content, err := ioutil.ReadFile(path)
+	// content, err := ioutil.ReadFile("https://raw.githubusercontent.com/jinsoo-youn/mail/master/config.yaml")
 	if err != nil {
 		panic(err)
 	}

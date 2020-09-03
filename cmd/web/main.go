@@ -27,8 +27,10 @@ func main() {
 	// d := gomail.NewDialer("mail.tmax.co.kr", 587, "jinsoo_youn@tmax.co.kr", string(pwr))
 
 	var key = []byte("tmaxcloudck2-1js")
+
 	a, _ := NewAesCipher(key)
 	pw := a.EncryptString("ererer")
+	pasword.NewAesCipher
 	fmt.Println(pw)
 	d := gomail.NewDialer(config.SmtpInfo.SmtpHost, config.SmtpInfo.SmtpPort, config.SmtpInfo.SmtpId, config.SmtpInfo.SmtpPw)
 

@@ -1,3 +1,4 @@
+// Package encry, decry password
 package password
 
 import (

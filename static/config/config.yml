@@ -2,7 +2,7 @@ smtpInfo:
     smtp_host: mail.tmax.co.kr
     smtp_port: 587
     smtp_id: jinsoo_youn@tmax.co.kr
-    smtp_pw: wlstn1212
+    smtp_pw: yFgOiKqHci9M8a29i9HFgx-81mBy8XwUBA==
 message:
     from: jinsoo_youn@tmax.co.kr
     to: ['jinsoo_youn@tmax.co.kr']
